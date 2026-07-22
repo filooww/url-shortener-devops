@@ -1,0 +1,24 @@
+---
+- name: Install git
+  apt:
+    name: git
+    state: present
+    update_cache: true
+
+- name: Clone or update the project repository
+  git:
+    repo: "{{ repo_url }}"
+    dest: "{{ app_dir }}"
+    version: main
+    force: true
+
+- name: Render .env for docker-compose
+  template:
+    src: env.j2
+    dest: "{{ app_dir }}/.env"
+    mode: "0600"
+
+- name: Build and start the stack
+  command: docker compose up -d --build
+  args:
+    chdir: "{{ app_dir }}"
