@@ -1,0 +1,6 @@
+---
+repo_url: "https://github.com/filooww/url-shortener-devops.git"
+app_dir: "/opt/url-shortener"
+postgres_user: "urlshort"
+postgres_db: "urlshort"
+postgres_password: "{{ vault_postgres_password }}"

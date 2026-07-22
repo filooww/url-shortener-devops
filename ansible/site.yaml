@@ -1,0 +1,7 @@
+---
+- name: Configure app server
+  hosts: web
+  become: true
+  roles:
+    - docker
+    - app
