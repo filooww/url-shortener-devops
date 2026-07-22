@@ -26,3 +26,5 @@ venv/
 # App runtime
 *.db
 .pytest_cache/
+!.env.example
+*.swp
