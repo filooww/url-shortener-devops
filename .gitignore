@@ -22,3 +22,7 @@ venv/
 
 # OS
 .DS_Store
+
+# App runtime
+*.db
+.pytest_cache/
