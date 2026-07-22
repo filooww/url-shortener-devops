@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: url-shortener
+data:
+  POSTGRES_USER: urlshort
+  POSTGRES_DB: urlshort
+  REDIS_URL: redis://redis:6379/0
+
