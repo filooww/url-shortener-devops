@@ -28,3 +28,7 @@ venv/
 .pytest_cache/
 !.env.example
 *.swp
+
+# k8s secrets
+k8s/secret.yaml
+!k8s/secret.yaml.example
